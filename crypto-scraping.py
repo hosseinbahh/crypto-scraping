@@ -5,7 +5,8 @@ from time import sleep
 import numpy as np
 
 try:
-    html = urlopen('https://coinranking.com')
+    urlinput = input("please enter a link : ")
+    html = urlopen("https://"+urlinput)
     bs = BeautifulSoup(html.read(), 'lxml')
     
     # استخراج تمام ردیف‌های جدول
@@ -35,4 +36,4 @@ except URLError as e:
     print("you should connect to the internet")
     sleep(1)
 
-print("-----------------------------------------------------------------")
+print("*-----------------------------------------------------------------*")
